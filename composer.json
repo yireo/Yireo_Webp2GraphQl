@@ -1,6 +1,6 @@
 {
   "name": "yireo/module-webp2-graph-ql",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Add GraphQL support to Yireo Webp2 for Magento 2",
   "type": "magento2-module",
   "require": {
