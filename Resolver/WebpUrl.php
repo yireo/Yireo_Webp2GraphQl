@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Yireo\Webp2GraphQl\GraphQl\Resolver;
+namespace Yireo\Webp2GraphQl\Resolver;
 
 use Magento\CatalogGraphQl\Model\Resolver\Product\MediaGallery\Url as UrlResolver;
 use Magento\Framework\Exception\FileSystemException;
