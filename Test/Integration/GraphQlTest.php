@@ -24,11 +24,11 @@ class GraphQlTest extends GraphQlTestCase
     {
         $data = $this->getGraphQlQueryData(file_get_contents(__DIR__ . '/fixtures/product_media_gallery.graphql'));
 
-        $this->assertNotEmpty($data);
+        $this->assertNotEmpty($data, 'No data from GraphQL');
         $this->assertArrayHasKey('data', $data, var_export($data, true));
         $this->assertArrayHasKey('products', $data['data']);
         $this->assertArrayHasKey('items', $data['data']['products']);
-        $this->assertNotEmpty($data['data']['products']['items']);
+        $this->assertNotEmpty($data['data']['products']['items'], 'No product items found');
 
         $productData = $data['data']['products']['items'][0];
         $this->assertArrayHasKey('media_gallery', $productData);

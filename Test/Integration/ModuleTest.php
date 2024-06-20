@@ -16,6 +16,8 @@ class ModuleTest extends TestCase
     {
         $registrar = new ComponentRegistrar();
         $paths = $registrar->getPaths(ComponentRegistrar::MODULE);
+        $this->assertArrayHasKey('Yireo_NextGenImages', $paths);
+        $this->assertArrayHasKey('Yireo_Webp2', $paths);
         $this->assertArrayHasKey('Yireo_Webp2GraphQl', $paths);
     }
 

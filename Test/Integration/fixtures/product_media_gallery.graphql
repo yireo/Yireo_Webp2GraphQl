@@ -1,5 +1,5 @@
 query {
-  products(search:"a", pageSize: 1){
+  products(search:"Simple Product", pageSize: 1){
     items {
       sku
       name
