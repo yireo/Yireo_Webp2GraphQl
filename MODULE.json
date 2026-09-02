@@ -1,0 +1,7 @@
+{
+    "module_name": "Yireo_Webp2GraphQl",
+    "composer_name": "yireo/magento2-webp2-graph-ql",
+    "sequence": [
+        "Yireo_Webp2"
+    ]
+}
