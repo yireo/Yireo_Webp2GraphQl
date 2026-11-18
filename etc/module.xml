@@ -2,6 +2,9 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="Yireo_Webp2GraphQl">
         <sequence>
+            <module name="Magento_CatalogGraphQl"/>
+            <module name="Magento_GraphQl"/>
+            <module name="Yireo_NextGenImages"/>
             <module name="Yireo_Webp2"/>
         </sequence>
     </module>

@@ -5,7 +5,10 @@
     "type": "magento2-module",
     "require": {
         "magento/framework": "^102.0|^103.0",
+        "magento/module-catalog-graph-ql": "^100.4",
+        "magento/module-graph-ql": "^100.4",
         "php": ">=8.2 <8.6",
+        "yireo/magento2-next-gen-images": "~0.5.17",
         "yireo/magento2-webp2": "^0.14"
     },
     "license": [
@@ -20,6 +23,7 @@
         }
     },
     "require-dev": {
+        "phpunit/phpunit": "^10.5",
         "yireo/magento2-integration-test-helper": "~0.0"
     }
 }
