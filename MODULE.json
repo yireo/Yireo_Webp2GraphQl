@@ -3,5 +3,7 @@
     "composer_name": "yireo/magento2-webp2-graph-ql",
     "sequence": [
         "Yireo_Webp2"
-    ]
+    ],
+    "phpcs_severity": "1",
+    "phpstan_level": "5"
 }
