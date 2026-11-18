@@ -2,6 +2,9 @@
     "module_name": "Yireo_Webp2GraphQl",
     "composer_name": "yireo/magento2-webp2-graph-ql",
     "sequence": [
+        "Magento_CatalogGraphQl",
+        "Magento_GraphQl",
+        "Yireo_NextGenImages",
         "Yireo_Webp2"
     ],
     "phpcs_severity": "1",
