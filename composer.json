@@ -11,9 +11,7 @@
         "yireo/magento2-next-gen-images": "~0.5.17",
         "yireo/magento2-webp2": "^0.14"
     },
-    "license": [
-        "OSL-3.0"
-    ],
+    "license": "OSL-3.0",
     "autoload": {
         "files": [
             "registration.php"
