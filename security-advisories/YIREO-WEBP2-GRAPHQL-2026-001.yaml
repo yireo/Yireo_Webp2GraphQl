@@ -1,0 +1,34 @@
+schema_version: "1.6.0"
+id: YIREO-WEBP2-GRAPHQL-2026-001
+published: "2026-11-25T00:00:00Z"
+modified: "2026-11-25T00:00:00Z"
+aliases: []
+summary: Unauthenticated url_webp GraphQL requests trigger on-demand image conversion (denial of service)
+details: >
+  The url_webp GraphQL field resolver converted product images to WebP during the GraphQL request
+  itself. Because product media queries are available to anonymous visitors, an unauthenticated
+  attacker could send many requests to force repeated image conversions, exhausting CPU and disk
+  space on the server. Conversion failures were thrown as exceptions, which leaked server file
+  paths in the GraphQL response and flooded the exception log. Version 1.0.6 no longer converts
+  images during a request: the resolver only returns the URL of an existing, up-to-date WebP image
+  and returns null otherwise. It also checks that both Yireo_NextGenImages and Yireo_Webp2 are
+  enabled, and confines source and target paths to pub/media and pub/static.
+severity:
+  - type: CVSS_V3
+    score: "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+affected:
+  - package:
+      ecosystem: Packagist
+      name: yireo/magento2-webp2-graph-ql
+    ranges:
+      - type: ECOSYSTEM
+        events:
+          - introduced: "0"
+          - fixed: "1.0.6"
+references:
+  - type: PACKAGE
+    url: https://github.com/yireo/Yireo_Webp2GraphQl
+database_specific:
+  cwe_ids:
+    - CWE-400
+    - CWE-209
